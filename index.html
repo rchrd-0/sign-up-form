@@ -8,36 +8,57 @@
     <title>The Odin Project—Sign-up Form</title>
 </head>
 <body>
-    <div class="container">
-        <div class="hero-section">
-            <div class="hero-tag">
-                <div class="tag-wrapper">
+    <div id="container">
+        <div id="hero-section">
+            <div id="hero-tag">
+                <div id="tag-wrapper">
                     <img src="./img/odin-lined.png" alt="helmed head with beard, logo">
                     ODIN
                 </div>
             </div>
-            <div class="hero-footer">
+            <div id="hero-footer">
                 Made by <a href="https://github.com/rchrd-0" target="_blank">RCHRD</a> for <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
             </div>
         </div>
         
-        <div class="main">
-            <h1>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span class="italic">now</span> to get started.</h1>
-            <h1>You <span class="italic">know</span> you want to.</h1>
-            <form action="">
-                <h1>Let's do this</h1>
-                <label for="first-name">First name</label>
-                <input type="text" id="first-name" name="first-name">
-                <label for="last-name">Last name</label><input type="text" name="last-name" id="last-name">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-                <label for="phone-number">Phone number</label>
-                <input type="tel" name="phone-number" id="phone-number">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password">
-                <label for="confirm-password">Confirm password</label>
-                <input type="password" name="confirm-password" id="confirm-password">
-            </form>
+        <div id="content">
+            <div id="call-to-action">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span class="italic">now</span> to get started.</p>
+                <p>You <span class="italic">know</span> you want to.</p>
+            </div>
+            <div id="form-wrapper">
+                <form action="" id="sign-up">
+                    <p>Let's do this!</p>
+                    <div class="input-field">
+                        <label for="first-name">First name</label>
+                        <input type="text" id="first-name" name="first-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="last-name">Last name</label>
+                        <input type="text" name="last-name" id="last-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="input-field">
+                        <label for="phone-number">Phone number</label>
+                        <input type="tel" name="phone-number" id="phone-number">
+                    </div>
+                    <div class="input-field">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div class="input-field">
+                        <label for="confirm-password">Confirm password</label>
+                        <input type="password" name="confirm-password" id="confirm-password">
+                    </div>
+                </form>
+            </div>
+            <div id="submit-section">
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
         </div>
     </div>
 </body>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700;800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 
 * {
     padding: 0;
@@ -14,21 +14,22 @@ a:link,
 a:visited {
     color: #8FBCBB;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .italic {
     font-style: italic;
 }
 
-.container,
-.hero-section,
-.main {
+#container,
+#hero-section,
+#content {
     display: flex;
     min-height: 100vh;
 }
 
 
-.hero-section {
+#hero-section {
     min-width: 33vw;
     background-image: url('../img/hero-0.jpg');
     background-position: center;
@@ -40,7 +41,7 @@ a:visited {
     font-weight: 500;
 }
 
-.tag-wrapper {
+#tag-wrapper {
     width: 300px;
     height: 80px;
     display: flex;
@@ -53,17 +54,17 @@ a:visited {
     border-radius: 12px;
 }
 
-.tag-wrapper img {
+#tag-wrapper > img {
     width: 45px;
 }
 
-.hero-tag {
+#hero-tag {
     display: flex;
     justify-content: center;
     flex: 1;
 }
 
-.hero-footer {
+#hero-footer {
     align-self: center;
     padding: 10px 20px;
     background-color: rgba(76, 86, 106, 0.783);
@@ -71,7 +72,66 @@ a:visited {
     margin-bottom: 30px;
 }
 
-.main {
+#content {
     flex-direction: column;
+    background-color: #eceff4;
+    font-size: 1.4rem;
+    color: #434C5E;
 }
 
+#content > div {
+    padding: 50px 30% 50px 100px;
+}
+
+#call-to-action {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#form-wrapper {
+    background-color: #D8DEE9;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form > p {
+    width: 100%;
+}
+
+.input-field {
+    width: 50%;
+}
+
+.input-field > label {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    filter: opacity(0.8);
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+}
+
+.input-field > input {
+    line-height: 1.8rem;
+    width: 80%;
+}
+
+#submit-section > button {
+    background-color: #8FBCBB;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #ECEFF4;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#submit-section > p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
