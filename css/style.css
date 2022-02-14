@@ -80,10 +80,12 @@ a:visited {
 }
 
 #content > div {
-    padding: 50px 30% 50px 100px;
+    padding-left: 50px;
+    padding-right: 30%;
 }
 
 #call-to-action {
+    margin: 100px 0 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -91,6 +93,7 @@ a:visited {
 
 #form-wrapper {
     background-color: #D8DEE9;
+    padding: 25px 0 50px;
 }
 
 form {
@@ -98,8 +101,21 @@ form {
     flex-wrap: wrap;
 }
 
-form > p {
+#form-instructions {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#all-required {
+    background-color: #4c566a;
+    color: #eceff4;
+    font-size: 0.9rem;
+    border: 1px solid #434C5E;
+    padding: 5px 7px;
+    border-radius: 8px;
+    margin-right: 10%;
 }
 
 .input-field {
@@ -126,6 +142,7 @@ form > p {
 }
 
 #submit-section > button {
+    margin-top: 25px;
     background-color: #8FBCBB;
     border: none;
     padding: 10px 20px;
