@@ -31,32 +31,37 @@
                     <p>Let's do this!</p>
                     <div class="input-field">
                         <label for="first-name">First name</label>
-                        <input type="text" id="first-name" name="first-name">
+                        <input type="text" id="first-name" name="first-name" 
+                            required minlength="2" maxlength="20" pattern="[a-zA-z]{2,20}">
                     </div>
                     <div class="input-field">
                         <label for="last-name">Last name</label>
-                        <input type="text" name="last-name" id="last-name">
+                        <input type="text" name="last-name" id="last-name" 
+                            required minlength="2" maxlength="20" pattern="[a-zA-z]{2,20}">
                     </div>
                     <div class="input-field">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" required>
                     </div>
                     <div class="input-field">
                         <label for="phone-number">Phone number</label>
-                        <input type="tel" name="phone-number" id="phone-number">
+                        <input type="tel" name="phone-number" id="phone-number" 
+                            required minlength="8" maxlength="8" pattern="[0-9]{8,8}">
                     </div>
                     <div class="input-field">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" 
+                            required minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
                     </div>
                     <div class="input-field">
                         <label for="confirm-password">Confirm password</label>
-                        <input type="password" name="confirm-password" id="confirm-password">
+                        <input type="password" name="confirm-password" id="confirm-password" 
+                            required minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
                     </div>
                 </form>
             </div>
             <div id="submit-section">
-                <button type="submit">Create Account</button>
+                <button type="submit" form="sign-up">Create Account</button>
                 <p>Already have an account? <a href="#">Log in</a></p>
             </div>
         </div>

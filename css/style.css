@@ -117,8 +117,12 @@ form > p {
 }
 
 .input-field > input {
+    /* appearance: none; */
+    /* -webkit-appearance: none; */
     line-height: 1.8rem;
     width: 80%;
+    /* border: 1px solid #eceff4; */
+    /* border-radius: 4px; */
 }
 
 #submit-section > button {
