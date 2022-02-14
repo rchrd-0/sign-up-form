@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>The Odin Project—Sign-up Form</title>
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <div id="container">
@@ -35,31 +36,37 @@
                     <div class="input-field">
                         <label for="first-name">First name</label>
                         <input type="text" id="first-name" name="first-name" 
-                            required minlength="2" maxlength="20" pattern="[a-zA-z]{2,20}">
+                            required minlength="2" pattern="[a-zA-z]{2,}">
+                        <span></span>
                     </div>
                     <div class="input-field">
                         <label for="last-name">Last name</label>
                         <input type="text" name="last-name" id="last-name" 
-                            required minlength="2" maxlength="20" pattern="[a-zA-z]{2,20}">
+                            required minlength="2" pattern="[a-zA-z]{2,}">
+                        <span></span>
                     </div>
                     <div class="input-field">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" required>
+                        <input type="email" name="email" id="email" required placeholder="sample@email.com">
+                        <span></span>
                     </div>
                     <div class="input-field">
                         <label for="phone-number">Phone number</label>
                         <input type="tel" name="phone-number" id="phone-number" 
-                            required minlength="8" maxlength="8" pattern="[0-9]{8,8}">
+                            required minlength="8" maxlength="8" pattern="[0-9]{8,8}" placeholder="12345678">
+                        <span></span>
                     </div>
                     <div class="input-field">
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password" 
                             required minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+                        <span></span>
                     </div>
                     <div class="input-field">
                         <label for="confirm-password">Confirm password</label>
                         <input type="password" name="confirm-password" id="confirm-password" 
                             required minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+                        <span></span>
                     </div>
                 </form>
             </div>
