@@ -11,17 +11,19 @@ function showMessage(input) {
         'last-name': 'Last name is required, only letters please!',
         'email': 'A valid email address is required',
         'phone-number': 'An 8 digit phone number is required',
-        'confirm-password': 'Passwords must match',
     }
     const validationMessage = input.nextElementSibling;
     const messageText = validationErrors[input.id];
     const valid = input.validity.valid;
 
+    if (input === confirmPassword) return;
     if (input === password) {
         constrainPassword(valid);
-    } else {
-        validationMessage.textContent = (valid) ? '' : messageText
+        return;
     }
+
+    
+    validationMessage.textContent = (valid) ? '' : messageText;
 }
 
 function constrainPassword (valid) {
@@ -64,11 +66,12 @@ function constrainPassword (valid) {
 function checkPasswordMatch() {
     if (password.validity.valid) {
         if (confirmPassword.value === password.value) {
-            toggleValidity(confirmPassword, true)
+            toggleValidity(confirmPassword, true);
+            confirmPassword.nextElementSibling.textContent = '';
         } else {
             toggleValidity(confirmPassword, false);
+            confirmPassword.nextElementSibling.textContent = 'Passwords must match';
         }
-        showMessage(confirmPassword);
     }
 }
 
