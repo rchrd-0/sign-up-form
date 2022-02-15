@@ -1,9 +1,7 @@
 const form = document.querySelector('form');
-
-const firstName = document.getElementById('first-name');
-const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirm-password');
-const passwordRequirement = document.querySelectorAll('.password-requirement')
+
+const toggleValidity = (input, bool) => input.className = (bool) ? 'valid' : 'invalid';
 
 function showMessage(input) {
     const validationErrors = {
@@ -22,7 +20,6 @@ function showMessage(input) {
         return;
     }
 
-    
     validationMessage.textContent = (valid) ? '' : messageText;
 }
 
@@ -34,6 +31,8 @@ function constrainPassword (valid) {
     const lengthRequirement = document.querySelector('#pwd-length');
     const uppercaseRequirement = document.querySelector('#pwd-uppercase');
     const numRequirement = document.querySelector('#pwd-num');
+    const passwordRequirement = document.querySelectorAll('.password-requirement')
+
 
     if (!valid) {
         passwordRequirement.forEach(msg => msg.classList.remove('hidden'));
@@ -75,6 +74,7 @@ function checkPasswordMatch() {
     }
 }
 
+//Event listeners
 form.addEventListener('focusout', event => {
     const input = event.target;
     const validity = input.validity.valid;
@@ -103,5 +103,17 @@ form.addEventListener('input', event => {
     } 
 });
 
-const toggleValidity = (input, bool) => input.className = (bool) ? 'valid' : 'invalid';
+form.addEventListener('submit', event => {
+    const inputFields = [...document.querySelectorAll('input')];
 
+    inputFields.forEach(field => {
+        if (field.validity.valueMissing) {
+            field.classList.add('invalid');
+            showMessage(field);
+        }
+    });
+
+    if (inputFields.some(field => field.classList.contains('invalid'))) {
+        event.preventDefault();
+    }
+});
