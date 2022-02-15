@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 
+:root {
+    --valid-color: #A3BE8C;
+    --invalid-color: #BF616A;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -119,7 +124,7 @@ form {
 }
 
 .input-field {
-    margin-top: 7px;
+    /* margin-top: 7px; */
     width: 50%;
 }
 
@@ -169,20 +174,29 @@ input.invalid {
 }
 
 input.invalid:focus {
-    outline: 2px solid #bf616a;
-    border-color: #bf616a;
+    outline: 2px solid var(--invalid-color);
+    border-color: var(--invalid-color);
 }
 
 input.valid:focus {
-    outline: 2px solid #8fbcbb;
-    border-color: #8fbcbb;
+    outline: 2px solid #A3BE8C;
+    border-color: #A3BE8C;
 }
 
 div.validation-message {
+    width: 80%;
     height: 1.5rem;
     font-size: 0.9rem;
-    line-height: 1.5rem;
     color: #BF616A;
+    margin-top: 3px;
+}
+
+.hidden {
+    display: none;
+}
+
+.valid-text {
+    color: var(--valid-color);
 }
 /* input:valid:focus {
     outline: 2px solid #8fbcbb;
