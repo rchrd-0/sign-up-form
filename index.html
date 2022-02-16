@@ -24,10 +24,8 @@
         
         <div id="content">
             <div id="call-to-action">
-                <p>Excepteur deserunt incididunt quis ea quis esse aute magna eiusmod sunt ea.</p>
-                <p>Consequat quis dolore qui aliquip dolor mollit quis pariatur consectetur et magna ex labore sit.</p>
-                <!-- <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span class="italic">now</span> to get started.</p> -->
-                <!-- <p>You <span class="italic">know</span> you want to.</p> -->
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span class="italic">now</span> to get started.</p>
+                <p>You <span class="italic">know</span> you want to.</p>
             </div>
             <div id="form-wrapper">
                 <form action="" id="sign-up" novalidate>
@@ -63,7 +61,7 @@
                         <input type="password" name="password" id="password" 
                             required minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
                         <div class="validation-message">
-                            <div class="password-requirement hidden" id="pwd-length">8 characters minimum</div>
+                            <div class="password-requirement hidden" id="pwd-length">8 characters minimum <span id="current-length"></span></div>
                             <div class="password-requirement hidden" id="pwd-uppercase">1+ uppercase letter</div>
                             <div class="password-requirement hidden" id="pwd-num">1+ number</div>
                         </div>

@@ -32,6 +32,8 @@ function constrainPassword (valid) {
     const uppercaseRequirement = document.querySelector('#pwd-uppercase');
     const numRequirement = document.querySelector('#pwd-num');
     const passwordRequirement = document.querySelectorAll('.password-requirement')
+    const pwdLength = document.querySelector('#current-length');
+    pwdLength.textContent = `: ${password.value.length}/8`
 
 
     if (!valid) {
