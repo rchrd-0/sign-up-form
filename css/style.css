@@ -30,12 +30,12 @@ a:visited {
 #hero-section,
 #content {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 
 #hero-section {
-    min-width: 33vw;
+    min-width: 30vw;
     background-image: url('../img/hero-0.jpg');
     background-position: center;
     background-size: cover;
@@ -107,6 +107,7 @@ form {
 }
 
 #form-instructions {
+    margin-bottom: 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -124,12 +125,10 @@ form {
 }
 
 .input-field {
-    /* margin-top: 7px; */
     width: 50%;
 }
 
 .input-field > label {
-    /* margin-top: 28px; */
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
@@ -179,15 +178,15 @@ input.invalid:focus {
 }
 
 input.valid:focus {
-    outline: 2px solid #A3BE8C;
-    border-color: #A3BE8C;
+    outline: 2px solid var(--valid-color);
+    border-color: var(--valid-color);
 }
 
 div.validation-message {
     width: 80%;
     height: 1.5rem;
     font-size: 0.9rem;
-    color: #BF616A;
+    color: var(--invalid-color);
     margin-top: 3px;
 }
 
@@ -198,42 +197,12 @@ div.validation-message {
 .valid-text {
     color: var(--valid-color);
 }
-/* input:valid:focus {
-    outline: 2px solid #8fbcbb;
-    border-color: #8fbcbb;
+
+#submit-section {
+    margin: 25px 0 75px;
 }
-
-input:invalid:focus {
-    outline: 2px solid #bf616a;
-    border-color: #bf616a;
-} */
-
-/* input:valid + span::after {
-    width: 20px;
-    height: 20px;
-    content: '';
-    position: absolute;
-    background-image: url('../img/check-circle.svg');
-    background-size: 20px;
-    background-repeat: no-repeat;
-    top: 7px;
-    right: 58px;
-}
-
-input:invalid + span::after {
-    width: 20px;
-    height: 20px;
-    content: '';
-    position: absolute;
-    background-image: url(../img/alert-circle.svg);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    top: 7px;
-    right: 58px;
-} */
 
 #submit-section > button {
-    margin-top: 25px;
     background-color: #8FBCBB;
     border: none;
     padding: 10px 20px;
@@ -244,8 +213,43 @@ input:invalid + span::after {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-
 #submit-section > p {
     margin-top: 20px;
     font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1400px) {
+    div.validation-message {
+        height: 2.5rem;
+    }
+
+    #content > div {
+        padding-right: 10%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #container,
+    #hero-section,
+    #content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #hero-section {
+        min-height: 400px;
+    }
+
+    #call-to-action {
+        margin-top: 50px;
+    }
+
+    #content > div {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    div.validation-message {
+        height: 3.5rem;
+    }
 }
