@@ -18,13 +18,18 @@
                 </div>
             </div>
             <div id="hero-footer">
-                Made by <a href="https://github.com/rchrd-0" target="_blank">RCHRD</a> for <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
+                Made by 
+                <a href="https://github.com/rchrd-0" target="_blank">RCHRD</a> 
+                for <a href="https://www.theodinproject.com/" target="_blank">
+                The Odin Project</a>
             </div>
         </div>
         
         <div id="content">
             <div id="call-to-action">
-                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span class="italic">now</span> to get started.</p>
+                <p>This is not a real online service! You know you need something 
+                    like this in your life to help you realize your deepest dreams. 
+                    Sign up <span class="italic">now</span> to get started.</p>
                 <p>You <span class="italic">know</span> you want to.</p>
             </div>
             <div id="form-wrapper">
@@ -35,41 +40,74 @@
                     </div>
                     <div class="input-field">
                         <label for="first-name">First name</label>
-                        <input type="text" id="first-name" name="first-name" 
-                            required minlength="1" pattern="^[a-zA-Z\s]{1,}$">
+                        <input type="text" 
+                            id="first-name" 
+                            name="first-name" 
+                            required 
+                            minlength="1" 
+                            pattern="^[a-zA-Z\s]{1,}$">
                         <div class="validation-message"></div>
                     </div>
                     <div class="input-field">
                         <label for="last-name">Last name</label>
-                        <input type="text" name="last-name" id="last-name" 
-                            required minlength="1" pattern="^[a-zA-Z]{1,}$">
+                        <input type="text" 
+                            name="last-name" 
+                            id="last-name" 
+                            required 
+                            minlength="1" 
+                            pattern="^[a-zA-Z]{1,}$">
                         <div class="validation-message"></div>
                     </div>
                     <div class="input-field">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" required placeholder="sample@example.com">
+                        <input type="email" 
+                            name="email" 
+                            id="email" 
+                            required 
+                            placeholder="sample@example.com">
                         <div class="validation-message"></div>
                     </div>
                     <div class="input-field">
                         <label for="phone-number">Phone number</label>
-                        <input type="tel" name="phone-number" id="phone-number" 
-                            required minlength="8" maxlength="8" pattern="[0-9]{8,8}" placeholder="12345678">
+                        <input type="tel" 
+                            name="phone-number" 
+                            id="phone-number" 
+                            required 
+                            minlength="8" 
+                            maxlength="8" 
+                            pattern="[0-9]{8,8}" 
+                            placeholder="12345678">
                         <div class="validation-message"></div>
                     </div>
                     <div class="input-field">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" 
-                            required minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+                        <input type="password" 
+                            name="password" 
+                            id="password" 
+                            required 
+                            minlength="8" 
+                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
                         <div class="validation-message">
-                            <div class="password-requirement hidden" id="pwd-length">8 characters minimum <span id="current-length"></span></div>
-                            <div class="password-requirement hidden" id="pwd-uppercase">1+ uppercase letter</div>
-                            <div class="password-requirement hidden" id="pwd-num">1+ number</div>
+                            <div class="password-requirement hidden" id="pwd-length">
+                                8 characters minimum 
+                                <span id="current-length"></span>
+                            </div>
+                            <div class="password-requirement hidden" id="pwd-uppercase">
+                                1+ uppercase letter
+                            </div>
+                            <div class="password-requirement hidden" id="pwd-num">
+                                1+ number
+                            </div>
                         </div>
                     </div>
                     <div class="input-field">
                         <label for="confirm-password">Confirm password</label>
-                        <input type="password" name="confirm-password" id="confirm-password" 
-                            pattern ="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+                        <input type="password" 
+                            name="confirm-password" 
+                            id="confirm-password" 
+                            required
+                            minlength="8"
+                            pattern ="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
                         <div class="validation-message"></div>
                     </div>
                 </form>
